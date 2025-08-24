@@ -29,18 +29,18 @@ export function Header() {
       <div className="bg-birthday-gradient text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4">
-            <Link href="/shop" className="hover:text-birthday-yellow transition-colors">
+            <Link href={"/shop" as any} className="hover:text-birthday-yellow transition-colors">
               🎁 Gift Shop
             </Link>
-            <Link href="/about" className="hover:text-birthday-yellow transition-colors">
+            <Link href={"/about" as any} className="hover:text-birthday-yellow transition-colors">
               About Us
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="/blog" className="hover:text-birthday-yellow transition-colors">
+            <Link href={"/blog" as any} className="hover:text-birthday-yellow transition-colors">
               Birthday Blog
             </Link>
-            <Link href="/community" className="hover:text-birthday-yellow transition-colors">
+            <Link href={"/community" as any} className="hover:text-birthday-yellow transition-colors">
               Community
             </Link>
           </div>
@@ -81,7 +81,7 @@ export function Header() {
               {navItems.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  href={item.href as any}
                   className="flex flex-col items-center space-y-1 group hover:text-birthday-orange transition-colors"
                 >
                   <div className="p-2 rounded-lg group-hover:bg-birthday-yellow/20 transition-colors">

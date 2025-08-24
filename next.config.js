@@ -1,36 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: ["*.preview.same-app.com"],
-  images: {
-    domains: [
-      "source.unsplash.com",
-      "images.unsplash.com",
-      "ext.same-assets.com",
-      "ugc.same-assets.com",
-    ],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "source.unsplash.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "ext.same-assets.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "ugc.same-assets.com",
-        pathname: "/**",
-      },
-    ],
-  },
+  reactStrictMode: true,
+  // dynamic Next.js on Vercel; DO NOT use 'export'
+  output: 'standalone',
+  // If you aren't using i18n or basePath, keep them undefined.
+  // i18n: undefined,
+  // basePath: '',
+  experimental: {
+    typedRoutes: true
+  }
 };
 
 module.exports = nextConfig;

@@ -172,7 +172,7 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredTools.map((tool, index) => (
-              <Link href={tool.href} key={tool.title} className="group">
+              <Link href={tool.href as any} key={tool.title} className="group">
                 <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
                   <div className={`${tool.gradient} p-6 text-white relative`}>
                     {tool.badge && (
@@ -211,7 +211,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {quickTools.map((tool) => (
-              <Link href={tool.href} key={tool.title} className="group">
+              <Link href={tool.href as any} key={tool.title} className="group">
                 <Card className="h-full hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                   <CardHeader className="text-center">
                     <div className={`mx-auto p-4 rounded-full bg-gray-100 w-fit group-hover:scale-110 transition-transform`}>
