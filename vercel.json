@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "routes": []
+  "framework": "nextjs",
+  "installCommand": "npm ci || npm i",
+  "buildCommand": "npm run build",
+  "env": {
+    "NEXT_TELEMETRY_DISABLED": "1"
+  }
 }
