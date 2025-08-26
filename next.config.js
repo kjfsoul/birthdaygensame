@@ -3,12 +3,18 @@ const nextConfig = {
   // Keep dynamic on Vercel. Do NOT set `output: 'export'`.
   reactStrictMode: true,
   
-  // Remove any custom distDir; Next expects `.next` on Vercel.
-  // distDir: '.next', // (default) — leaving it implicit avoids mistakes
-
-  // If typedRoutes was turned on and you have non-existent links, disable it.
+  // Disable static optimization completely
   experimental: {
     typedRoutes: false,
+  },
+  
+  // Ensure all pages are server-rendered
+  async redirects() {
+    return []
+  },
+  
+  async rewrites() {
+    return []
   },
 
   // Helpful when lint rules aren’t ready in CI
