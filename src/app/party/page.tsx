@@ -16,6 +16,8 @@ import {
   Gift
 } from "lucide-react"
 
+export const dynamic = 'force-dynamic'
+
 export default function PartyPlannerPage() {
   const steps = [
     { number: 1, title: 'Basic Details', icon: PartyPopper, completed: true },
