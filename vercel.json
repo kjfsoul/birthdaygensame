@@ -1,8 +1,15 @@
 {
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "installCommand": "npm ci || npm i",
   "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm ci || npm install",
+  "outputDirectory": ".next",
+  "functions": {
+    "src/app/**/*.{js,ts,jsx,tsx}": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "env": {
     "NEXT_TELEMETRY_DISABLED": "1"
   }
