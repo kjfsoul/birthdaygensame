@@ -4,6 +4,9 @@ import { Header } from "@/components/Header"
 import ClientBody from "./ClientBody"
 import Script from "next/script"
 
+// Force dynamic rendering for the entire application
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'BirthdayGen - Make Every Birthday Special',
   description: 'Create personalized birthday cards, plan amazing parties, and discover perfect gifts with BirthdayGen - your ultimate birthday celebration platform.',

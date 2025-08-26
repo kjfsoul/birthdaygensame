@@ -2,7 +2,7 @@
 const nextConfig = {
   // Keep dynamic on Vercel. Do NOT set `output: 'export'`.
   reactStrictMode: true,
-
+  
   // Remove any custom distDir; Next expects `.next` on Vercel.
   // distDir: '.next', // (default) — leaving it implicit avoids mistakes
 
